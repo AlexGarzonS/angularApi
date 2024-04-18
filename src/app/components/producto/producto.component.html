@@ -1,0 +1,18 @@
+<ng-container *ngIf="product">
+  <div fxLayout="row" fxLayoutAlign="center center">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>{{product.title}}</mat-card-title>
+        </mat-card-header>
+        <img class="imagenAjuste" src={{product.images}}>
+        <mat-card-content>
+          <p>
+            {{product.price | currency}}
+          </p>
+        </mat-card-content>
+      </mat-card>
+  </div>
+</ng-container>
+<ng-container *ngIf="!product">
+    No hay productos
+</ng-container>
